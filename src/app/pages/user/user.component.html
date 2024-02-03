@@ -1,0 +1,7 @@
+<h1>User Page</h1>
+<br>
+@for (user of listUsers; track $index){
+    <li>{{user.name}}</li>
+}@empty {
+    <h1>No hay ningun usuario actualmente</h1>
+}

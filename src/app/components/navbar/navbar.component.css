@@ -1,0 +1,18 @@
+.links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 2%;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+.links{
+    padding: 2%;
+}
