@@ -1,7 +1,11 @@
 <h1>User Page</h1>
 <br>
 @for (user of listUsers; track $index){
-    <li>{{user.name}}</li>
+    <li>{{$index + 1}} {{user.name}}</li>
 }@empty {
     <h1>No hay ningun usuario actualmente</h1>
 }
+
+<app-movies (countEventEmitter)="countSum($event)"/>
+<p>El valor del contador es: {{count}}</p>
+<p>El elemento tiene un id de: {{id}}</p>

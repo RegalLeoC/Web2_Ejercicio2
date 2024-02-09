@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-movies',
@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './movies.component.css'
 })
 export class MoviesComponent {
+
+  count = 0;
+  @Output() countEventEmitter = new EventEmitter();
+
+  sum() {
+    this.count ++;
+    this.countEventEmitter.emit(this.count);
+  }
 
 }
